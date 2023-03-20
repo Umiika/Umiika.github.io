@@ -19,7 +19,7 @@ h1 {
     font-size: 25px;
     margin: 25px auto;
     margin-bottom: 50px;
-    font-family: 'Work Sans';
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
   }
   a {
     color: palevioletred;
@@ -29,6 +29,7 @@ h1 {
     font-weight: bolder;
     color: firebrick;
     font-size: 20px;
+    font-family: 'Work Sans';
   }
   .section-box {
     max-width: 90%;
@@ -44,5 +45,5 @@ h1 {
     margin-bottom: 50px;
     overflow: auto;
     border-radius: 25px;
-    font-family: 'Work Sans';
+    font-family: "Verdana", sans-serif;
   }

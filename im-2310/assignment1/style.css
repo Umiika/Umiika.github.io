@@ -21,6 +21,12 @@ h1 {
     margin-bottom: 50px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
   }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
   a {
     color: palevioletred;
     text-decoration: none;
@@ -36,11 +42,11 @@ h1 {
     display: block;
     color:white;
     background-color:tomato;
-    border-style: groove;
-    border-color: #e2d5c0;
-    border-width: 5px;
+    border-style: outset;
+    border-color: lightsalmon;
+    border-width: 8px;
     padding: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     margin: 0 auto;
     margin-bottom: 50px;
     overflow: auto;

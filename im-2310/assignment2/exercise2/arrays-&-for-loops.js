@@ -8,17 +8,5 @@ var fruitArray = ["banana", "pineapple", "apple", "peach", "orange"];
 
 var mixedArray = [42, "pineapple", true, [3, 6, "nine"], "orange"];
 
-console.log(fruitArray[5]);
+console.log("I'm going to help test the array");
 
-fruitArray[1]="tomato"
-
-console.log(fruitArray,length);
-
-for(let fruit of fruitArray){
-    console.log(fruit);
-    if(fruit === "tomato"){
-        console.log("bur is it fruit?");
-    } else {
-        console.log(fruit);
-    }
-}

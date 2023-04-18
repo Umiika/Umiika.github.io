@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="./filter.js" defer></script>
-    <script src="./arrays-&-for-loops.js" defer></script>
+    <!-- <script src="./arrays-&-for-loops.js" defer></script> -->
 
     <title>exercise 2</title>
 
@@ -17,80 +17,34 @@
 
   <body>
 
-    <h1>Interactive Media 1 Recipe List</h1>
+    <div>Interactive Media 1 Recipe List</div>
 
     <hr /> 
 
-    <h2 class="FilterSection">     
-      <!--I chose these category because these are the most commonly used ones, and I have arranged them in alphabetical order so that they are also easy to find.-->
-      <!--I used details open because users can see all the options directly when browsing the site, so they can quickly filter the categories they want to see with just one click. -->
-      <details open class="FilterBox">
+    <div class="FilterSection">     
+
+      <details class="FilterBox">
         <summary>Author</summary>
-        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Authors</button>
-        <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
-        <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
         <button class="FilterButton" onclick='filterCategory("KLA", this)'>J. Kenji López-Alt</button>
         <button class="FilterButton" onclick='filterCategory("M", this)'>Maangchi</button>
-      </details>
-      <!--I did not use alphabetical order for course category, but ordered them in course order. Because there is no specific order for the other categories themselves, but the course order itself is an order.-->
-      <details open class="FilterBox">
-        <summary>Course</summary>
-        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Courses</button>
-        <button class="FilterButton" onclick='filterCategory("Sa", this)'>Salad</button>
-        <button class="FilterButton" onclick='filterCategory("Ma", this)'>Main</button>
-        <button class="FilterButton" onclick='filterCategory("De", this)'>Dessert</button>
-        <button class="FilterButton" onclick='filterCategory("Sn", this)'>Snack</button>
+        <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
+        <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
       </details>
 
-      <!--Not really sure the correct way to filter different elements, so I just add one key letter in RecipeBox div to represent these different cuisine recipes.-->
-      <details open class="FilterBox">
-        <summary>Cuisine</summary>
-        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Cuisines</button>
-        <button class="FilterButton" onclick='filterCategory("A", this)'>American</button>
-        <button class="FilterButton" onclick='filterCategory("F", this)'>French</button>
-        <button class="FilterButton" onclick='filterCategory("Fu", this)'>Fusion</button>
-        <button class="FilterButton" onclick='filterCategory("I", this)'>Italian</button>
-        <button class="FilterButton" onclick='filterCategory("K", this)'>Korean</button>
-        <button class="FilterButton" onclick='filterCategory("N", this)'>North African</button>
-        <button class="FilterButton" onclick='filterCategory("R", this)'>Russian</button>
-        <button class="FilterButton" onclick='filterCategory("W", this)'>Western</button>
-      </details>
-      <!--I was going to design to use only two buttons, from longest to shortest, and from shortest to longest, but this requires changes in Javascrip. And I don't think anyone will click for "All times" this option so I didn't include it.-->
-      <details open class="FilterBox">
-        <summary>Time to cook</summary>
-        <button class="FilterButton" onclick='filterCategory("L15", this)'>Less than 15 mins</button>
-        <button class="FilterButton" onclick='filterCategory("30m", this)'>30 - 45 mins</button>
-        <button class="FilterButton" onclick='filterCategory("Ho", this)'>1 - 2 hours</button>
-        <button class="FilterButton" onclick='filterCategory("Hours", this)'>More than 3 hours</button>
-      </details>
-    </h2>
-    
+    </div>
+
     <hr /> 
 
     <!-- Recipe 1 -->
-    <div class="RecipeBox HM Ma I L15">
+    <div class="RecipeBox HM">
 
       <!-- don't forget to change out <div>s for the most appropriate element -->
       <!-- i'll give you one for free - you should change the URL into an <a> tag, don't forget to add the appropriate attributes so it works as a link -->
+      <div class="RecipeLink">URL: https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338</div>
 
       <div class="RecipeName">Recipe Name: Baked Puttanesca Risotto with Olives, Lemon and Parsley</div>
 
       <div class="Author">Author: Hetty Mckinnon</div>
-
-      <table>
-        <tr>
-        <th class="TimeToCook">Prep Time</th>
-        <th class="TimeToCook">Cook Time</th>
-        <th class="SkillLevel">Skill Level</th>
-        <th class="Servings">Serves</th>
-        </tr>
-        <tr>
-        <td>0:10</td>
-        <td> 0:30</td>
-        <td> Low</td>
-        <td>4 to 6</td>
-      </tr>
-      </table>
       
       <!-- the RecipeImageContainer is actually fine to be left as a <div> - like the RecipeBox we're using it as a container for other elements -->
       <div class="RecipeImageContainer">
@@ -110,9 +64,17 @@
 
       </div>
 
+      <div class="Publisher">Publisher: ABC Everyday</div>
+
       <div class="Cuisine">Cuisine: Italian</div>
 
+      <div class="TimeToCook">Time to Cook: 0:10 prep time - 0:30 cook time</div>
+
+      <div class="SkillLevel">Skill Level: Low</div>
+
       <div class="Course">Course: Main</div>
+
+      <div class="Servings">Servings: 4 to 6</div>
 
       <div class="Dietary">Dietary: Vegetarian</div>
 
@@ -122,36 +84,16 @@
 
       <div class="SpecialEquipment">Special Equipment: Ovenproof Dutch oven</div>
 
-      <div class="Publisher">Publisher: ABC Everyday</div>
-      <br>
-      <div class="RecipeLink">URL: <a target="_blank" rel="noopener noreferrer" href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338</a> </div>
-
     </div>
     
     <!-- Recipe 2 -->
-    <div class="RecipeBox HM Sa I Ho">
+    <div class="RecipeBox HM">
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
 
       <div class="RecipeName">Recipe Name: Caprese Salad with Slow-Roasted Tomatoes, Rocket and Basil Gremolata</div>
 
       <div class="Author">Author: Hetty Mckinnon</div>
-
-      <div class="RecipeLink">URL: <a target="_blank" rel="noopener noreferrer" href="https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846">https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</a> </div
-      <table>
-        <tr>
-        <th class="TimeToCook">Prep Time</th>
-        <th class="TimeToCook">Cook Time</th>
-        <th class="SkillLevel">Skill Level</th>
-        <th class="Servings">Serves</th>
-        </tr>
-        <tr>
-        <td>0</td>
-        <td> 75-105 mins</td>
-        <td> Low</td>
-        <td>?</td>
-      </tr>
-      </table>
 
       <div class="RecipeImageContainer">
 
@@ -193,7 +135,7 @@
     </div>
     
     <!-- Recipe 3 -->
-    <div class="RecipeBox KLA Sn Fu 30m">
+    <div class="RecipeBox KLA">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
 
@@ -241,7 +183,7 @@
     </div>
     
     <!-- Recipe 4 -->
-    <div class="RecipeBox M Sn K L15">
+    <div class="RecipeBox M">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
 
@@ -288,7 +230,7 @@
     </div>
     
     <!-- Recipe 5 -->
-    <div class="RecipeBox KLA Sn W 30m">
+    <div class="RecipeBox KLA">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
 
@@ -334,7 +276,7 @@
     </div>
     
     <!-- Recipe 6 -->
-    <div class="RecipeBox KLA Sn Fu L15">
+    <div class="RecipeBox KLA">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
 
@@ -382,7 +324,7 @@
     </div>
     
     <!-- Recipe 7 -->
-    <div class="RecipeBox CLM Ma A Hours">
+    <div class="RecipeBox CLM">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
 
@@ -429,7 +371,7 @@
     </div>
     
     <!-- Recipe 8 -->
-    <div class="RecipeBox M Sn K L15">
+    <div class="RecipeBox M">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
 
@@ -475,7 +417,7 @@
     </div>
     
     <!-- Recipe 9 -->
-    <div class="RecipeBox KLA Ma N 30m">
+    <div class="RecipeBox KLA">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
 
@@ -521,7 +463,7 @@
     </div>
     
     <!-- Recipe 10 -->
-    <div class="RecipeBox CLM Ma I Ho">
+    <div class="RecipeBox CLM">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
 
@@ -567,7 +509,7 @@
     </div>
     
     <!-- Recipe 11 -->
-    <div class="RecipeBox M Ma K 30m">
+    <div class="RecipeBox M">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
 
@@ -615,7 +557,7 @@
     </div>
     
     <!-- Recipe 12 -->
-    <div class="RecipeBox KLA Ma R Ho">
+    <div class="RecipeBox KLA">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
 
@@ -663,7 +605,7 @@
     </div>
     
     <!-- Recipe 13 -->
-    <div class="RecipeBox CLM De F Hours">
+    <div class="RecipeBox CLM">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
 
@@ -711,7 +653,7 @@
     </div>
 
     <!-- Recipe 14 -->
-    <div class="RecipeBox HM Ma Fu L15">
+    <div class="RecipeBox HM">
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>
 

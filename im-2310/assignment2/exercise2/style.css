@@ -1,0 +1,159 @@
+/* z-index order */
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  --border: 1px solid var(--col-02);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+}
+
+h1 {
+  max-width: fit-content;
+  font-size: 60px;
+  margin: 25px auto;
+  margin-bottom: 50px;
+}
+
+h2 {
+  max-width: fit-content;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+/*the inline-block allows me to have all my details appear in one row, so it can save some spaces.*/
+details {
+  display: inline-block;
+  margin-inline:25px;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+table {
+  max-width: 60%;
+  border: 1px solid;
+  text-align: center;
+  margin-top: 25px;
+}
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-width: 8px;
+  padding: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  overflow: auto;
+  border-radius: 25px;
+}
+
+.FilterSection{
+
+}
+
+.FilterBox{
+
+}
+
+.FilterButton{
+
+}
+
+.SelectedFilter{
+  color:rgb(141, 67, 231);
+  background-color: #aba9a9;
+}
+
+.RecipeLink{
+
+}
+
+.RecipeName{
+  font-size: 150%;
+  color:var(--col-04);
+  margin-bottom: 20px;
+}
+
+.Author{
+  font-weight: bold;
+}
+
+.RecipeImageContainer{
+
+}
+
+.RecipeImg{
+  border:var(--border);
+  margin-top: 20px;
+  max-width:60%;
+  height: auto;
+}
+
+.Attribution{
+  font-size: small;
+  margin-bottom: 25px;
+}
+
+.Publisher{
+
+}
+
+.Cuisine{
+
+}
+
+.TimeToCook{
+
+}
+
+.SkillLevel{
+
+}
+
+.Course{
+
+}
+
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+}
+

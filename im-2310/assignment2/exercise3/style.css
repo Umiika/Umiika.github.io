@@ -1,0 +1,228 @@
+/*
+  This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
+  works for both.
+*/
+
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+  /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  /* I added a transition for background color when switch between dark and light mode. */
+  transition: background-color 0.7s linear;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+/* For ol part on the information page (hosono.html) I added pointer cursor and text colour when mouse move on to it. */
+a:hover {
+  cursor: pointer;
+  color:#65bfc2;
+}
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  float: right;
+  /* note the use of position: sticky to keep the button on the page even with scrolling */
+  position: sticky;
+  top: 1rem;
+  cursor: pointer;
+  background-color: #d1e4be;
+}
+/* The background will change when user place the mouse on it, so they know it is a clickable button. */
+#mode-button:hover{
+  background-color: #bcd3a4;
+}
+/* Once the user clicked the button, the text color also changed, this could increse their experiment when interacting with the button. */
+#mode-button:active{
+  color:var(--col-03);
+  background-color: #d1e4be;
+  border-radius: 5px;
+}
+
+@keyframes ani1{
+  0% {
+    background-color: #86CBCD;
+  }
+  25%{
+    background-color: #ABDFE0;
+  }
+  50%{
+    background-color: #F9E2AE;
+  }
+  75% {
+    background-color: #FBC78D;
+  }
+  100% {
+  background-color: #A6D676;
+  }
+}
+
+/* code for loading page */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* changing button to look like a link */
+#load-link{
+  line-height: 1rem;
+  background-color: rgb(207, 242, 207);
+  border: 0;
+  cursor:pointer;
+  border-radius: 3px;
+}
+/* I added hover effect for the button.*/
+#load-link:hover{
+  background-color: var(--col-04);
+}
+/* I found a set of gradient color palettes online, and I think the color transitions fit well with the current page's color scheme. */
+@keyframes cycleColour {
+  0% {
+    background-color: #86CBCD;
+  }
+  25%{
+    background-color: #ABDFE0;
+  }
+  50%{
+    background-color: #F9E2AE;
+  }
+  75% {
+    background-color: #FBC78D;
+  }
+  100% {
+  background-color: #A6D676;
+  }
+}
+
+/* throbber while page is fake loading */
+#load-throbber{
+  /* the width, height and background-color give it a shape on the page without any content inside - 
+  these value are arbitrary, please change to create your own design  */
+  width: 25%;
+  height: 1rem;
+  background-color: var(--col-03);
+  border:none;
+  text-align: center;
+  font-size: 2vh;
+  /* we also initially set display to none so it only shows once the link is clicked */
+  display: none;
+  /* I added the waiting cursor, the mouse will become a waiting cursor when loading. */
+  cursor: wait;
+  /* Insipred by motionTest.html */
+  animation: cycleColour 3s infinite ease-in-out;
+}
+
+/* Media Queries */
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}

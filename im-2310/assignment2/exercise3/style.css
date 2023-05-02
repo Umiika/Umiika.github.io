@@ -25,7 +25,7 @@ body{
   padding: 1rem;
   background-color: var(--col-02);
   color: var(--col-01);
-  /* I added a transition for background color when switch between dark and light mode. */
+  /* I added a transition for background color when switch between dark and light mode. This may help to protect users' eyes when they switching between dark and light mode.*/
   transition: background-color 0.7s linear;
 }
 

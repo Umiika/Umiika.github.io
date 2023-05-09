@@ -6,6 +6,8 @@ let videoElement = document.getElementById("videoElement");
 // the buttons for the controls
 let playButton = document.getElementById("playButton");
 let stopButton = document.getElementById("stopButton");
+let muteButton = document.getElementById("muteButton");
+let fullScreenButton = document.getElementById("fullScreenButton");
 // the progress element
 let progressBar = document.getElementById("progressBar");
 
@@ -148,7 +150,54 @@ progressBar.addEventListener('mousedown', (e) => {
 });
 
 
+/* Mute/UnMute */
+function muteunmute(){
+  if(videoElement.muted){
+    //run if muted
+    videoElement.muted = false;
+    muteButton.style.backgroundImage = "url('./icons/mute.svg')";
+  } else{
+    //run if unmuted
+    videoElement.muted = true;
+    muteButton.style.backgroundImage = "url('./icons/unmute.svg')";
+  }
+}
+muteButton.addEventListener("click",muteunmute);
 
+/* FullScreen/QuitFullScreen */
+var buttonFullScreen = document.getElementById('fullScreenButton');
+var video = document.getElementById('videoElement');
+buttonFullScreen.onclick = function(){
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  }
+  /* To make sure it can works on different browsers. */
+  else if (video.mozRequestFullScreen) {
+    video.mozRequestFullScreen();
+  }
+  else if (video.webkitRequestFullScreen) {
+    video.webkitRequestFullScreen();
+  }
+  else if (video.msRequestFullscreen) {
+    video.msRequestFullscreen();
+  }
+/* I was only able to get the button to go full screen when clicked, but after it's in fullscreen, I couldn't have my custom video player bar. */
+/* So the codes for exitFullScreen are not working:( Tried many ways.*/
+  else {
+    if (video.exitFullScreen) {
+    video.exitFullScreen();
+    }
+    else if (video.mozExitFullScreen) {
+      video.mozExitFullScreen();
+  }
+    else if (video.webkitExitFullScreen) {
+      video.webkitExitFullScreen();
+  }
+    else if (video.msExitFullscreen) {
+      video.msExitFullscreen();
+  }
+}
+}
 
 /* HELPER FUNCTIONS */
 

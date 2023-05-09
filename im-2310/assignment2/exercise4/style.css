@@ -20,8 +20,12 @@
 .video-player-wrapper{
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
@@ -68,6 +72,7 @@
   background-color: var(--col-05);
 }
 .video-control-button:active{
+  fill:#6f6f6f;
   background-color: var(--col-06);
 }
 .button-icon{
@@ -78,6 +83,13 @@
   background-image: url('./icons/play.svg');
 }
 
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+/* I wrote the fullScreen button together with the other buttons so that I can find it easily.*/
+#fullScreenButton{
+  background-image: url('./icons/fullScreen.svg');
+}
 .video-progress-bar{
   /* Reset the default appearance */
   -webkit-appearance: none;

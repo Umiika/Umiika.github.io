@@ -1,21 +1,99 @@
-<!DOCTYPE html>
-
 <html lang="en">
-    
-    <head>
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
 
-        <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    </head>
+    <script src="script.js" defer></script>
 
-    <body>
+    <title>Virtual Percussion Instrument Online</title>
 
-        <h1>This is my boilerplate</h1>
+  </head>
 
-    </body>
+  <body>
+    <h1>🎶Virtual Percussion Instrument Online🎶</h1>
+<!-- Audio id will be used to specify audio in Javascript. -->
+    <audio id="triangleAudio">
+      <source src="sound/Triangle.mp3"></audio>
+    <div class="animationHeartbeat"><img id="triangle" src="img/Triangle1.png" height="200" width="200"
+        onmouseover= "this.src='img/Triangle2.png';"
+        onmouseout= "this.src='img/Triangle1.png';"
+        onmousedown= "this.src='img/Triangle3.png';"
+        onmouseup= "this.src='img/Triangle2.png';"/>
+    </div>
+    <!-- I created different images  -->
 
-</html>
+    <audio id="claveAudio">
+      <source src="sound/Clave.mp3"></audio>
+    <div class="animationHeartbeat"><img id="clave" src="img/Clave1.png" height="200" width="200"
+            onmouseover= "this.src='img/Clave2.png';"
+            onmouseout= "this.src='img/Clave1.png';"
+            onmousedown= "this.src='img/Clave3.png';"
+            onmouseup= "this.src='img/Clave2.png';"/>
+    </div>
+
+    <audio id="brushAudio">
+      <source src="sound/Brush.mp3"></audio>
+    <div class="animationHeartbeat"><img id="brush" src="img/Brush1.png" height="200" width="200"
+            onmouseover= "this.src='img/Brush2.png';"
+            onmouseout= "this.src='img/Brush1.png';"
+            onmousedown= "this.src='img/Brush3.png';"
+            onmouseup= "this.src='img/Brush2.png';"/>
+    </div>
+
+    <audio id="shakerAudio">
+      <source src="sound/Shaker.mp3"></audio>
+    <div class="animationHeartbeat"><img id="shaker" src="img/Shaker1.png" height="200" width="200"
+            onmouseover= "this.src='img/Shaker2.png';"
+            onmouseout= "this.src='img/Shaker1.png';"
+            onmousedown= "this.src='img/Shaker3.png';"
+            onmouseup= "this.src='img/Shaker2.png';"/>
+    </div>
+
+    <audio id="drumAudio">
+      <source src="sound/Drum.mp3"></audio>
+    <div class="animationHeartbeat"><img id="drum" src="img/Drum1.png" height="200" width="200"
+            onmouseover= "this.src='img/Drum2.png';"
+            onmouseout= "this.src='img/Drum1.png';"
+            onmousedown= "this.src='img/Drum3.png';"
+            onmouseup= "this.src='img/Drum2.png';"/>
+    </div>
+
+    <audio id="hihatAudio">
+      <source src="sound/Hihat.mp3"></audio>
+    <div class="animationHeartbeat"><img id="hihat" src="img/Hihat1.png" height="200" width="200"
+            onmouseover= "this.src='img/Hihat2.png';"
+            onmouseout= "this.src='img/Hihat1.png';"
+            onmousedown= "this.src='img/Hihat3.png';"
+            onmouseup= "this.src='img/Hihat2.png';"/>
+    </div>
+
+    <audio id="tambourineAudio">
+      <source src="sound/Tambourine.mp3"></audio>
+    <div class="animationHeartbeat"><img id="tambourine" src="img/Tambourine1.png" height="200" width="200"
+            onmouseover= "this.src='img/Tambourine2.png';"
+            onmouseout= "this.src='img/Tambourine1.png';"
+            onmousedown= "this.src='img/Tambourine3.png';"
+            onmouseup= "this.src='img/Tambourine2.png';"/>
+    </div>
+
+    <audio id="xylophoneAudio">
+      <source src="sound/Xylophone.mp3"></audio>
+    <div class="animationHeartbeat"><img id="xylophone" src="img/Xylophone1.png" height="200" width="200"
+            onmouseover= "this.src='img/Xylophone2.png';"
+            onmouseout= "this.src='img/Xylophone1.png';"
+            onmousedown= "this.src='img/Xylophone3.png';"
+            onmouseup= "this.src='img/Xylophone2.png';"/>
+    </div>
+
+    <audio id="gongAudio">
+      <source src="sound/Gong.mp3"></audio>
+    <div class="animationHeartbeat"><img id="gong" src="img/Gong1.png" height="200" width="200"
+            onmouseover= "this.src='img/Gong2.png';"
+            onmouseout= "this.src='img/Gong1.png';"
+            onmousedown= "this.src='img/Gong3.png';"
+            onmouseup= "this.src='img/Gong2.png';"/>
+    </div>
+  </body>

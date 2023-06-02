@@ -1,28 +1,8 @@
-/* Load page */
-#load-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #load-link{
-    line-height: 1rem;
-    background-color: rgb(207, 242, 207);
-    border: 0;
-    cursor:pointer;
-    border-radius: 3px;
-  }
-  /* I added hover effect for the button.*/
-  #load-link:hover{
-    background-color: var(--col-04);
-  }
-
-/* Main Page */
 h1{
   text-align: center;
 }
+/* fit-content helps me to center the animation of the images, but I could only have one image per a line. */
+/* If I don't use fit-content then the image animates to move to the left, but if I use fit-content I can't adjust the position of the image as I wish. */
 .animationHeartbeat{
     animation: heartbeat;
     width:fit-content;
@@ -52,6 +32,3 @@ h1{
 	-webkit-animation: heartbeat 2s ease-in-out infinite both;
 	        animation: heartbeat 2s ease-in-out infinite both;
   }
-#triangle {
-  position: right top;
-}

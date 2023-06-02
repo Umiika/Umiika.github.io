@@ -33,3 +33,6 @@ document.getElementById("xylophone").addEventListener("click", function(){
 document.getElementById("gong").addEventListener("click", function(){
     document.getElementById("gongAudio").play();
 });
+
+/* dialog */
+dialog.showModal();
